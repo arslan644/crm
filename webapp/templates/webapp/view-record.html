@@ -1,0 +1,35 @@
+{% extends "webapp/base.html" %}
+
+{% block content %}
+    
+    <div class="card">
+        <h3 class=" bg-primary text-light card-header">
+            <i class="fa-regular fa-id-card"></i>
+            &nbsp;
+            {{record.first_name|upper}}
+            {{record.last_name|upper}}
+        </h3>
+    
+        <div class="card-body">
+            <p> <strong> &nbsp; ID:             </strong> &nbsp; {{record.id}}              </p>
+            <hr>
+            <p> <strong> &nbsp; Email:          </strong> &nbsp; {{record.email}}           </p>
+            <hr>
+            <p> <strong> &nbsp; Phone number:   </strong> &nbsp; {{record.phone}}           </p>
+            <hr>
+            <p> <strong> &nbsp; Address:        </strong> &nbsp; {{record.address}}         </p>
+            <hr>
+            <p> <strong> &nbsp; City:           </strong> &nbsp; {{record.city}}            </p>
+            <hr>
+            <p> <strong> &nbsp; Province:       </strong> &nbsp; {{record.province}}        </p>
+            <hr>
+            <p> <strong> &nbsp; Country:        </strong> &nbsp; {{record.country}}         </p>
+            <hr>
+            <p> <strong> &nbsp; Creation Date:  </strong> &nbsp; {{record.creation_date}}   </p>
+        </div>
+    </div>
+    <br>
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary"> <i class="fa-solid fa-arrow-left"> </i> &nbsp; Back </a>&nbsp;
+    <a href="{% url 'update-record' record.id %}" class="btn btn-info"> Update record  &nbsp; <i class="fa-solid fa-pen-to-square"></i></a>&nbsp;
+    <a href="{% url 'delete-record' record.id %}" class="btn btn-danger"> Delete &nbsp; <i class="fa-solid fa-trash"></i> </a>&nbsp;
+{% endblock content %}
