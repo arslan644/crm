@@ -97,7 +97,7 @@ virtualenv==20.24.6
 webdriver-manager==3.8.6
 webencodings==0.5.1
 websocket-client==1.6.3
-windows-curses==2.3.1
+
 wrapt==1.15.0
 wsproto==1.2.0
 yfinance==0.2.31
